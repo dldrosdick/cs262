@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">homework02</string>
+    <string name="error">Incorrect ID. Please try again.</string>
+    <string name="button">Fetch</string>
+    <string name="hint">Enter text here</string>
+    <string name="comma"> ", "</string>
+</resources>

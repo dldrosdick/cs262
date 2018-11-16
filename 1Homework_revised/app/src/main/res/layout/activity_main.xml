@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Value1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Input1"
+        android:layout_alignStart="@+id/Value2"
+        android:text="@string/value1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/Value2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Input2"
+        android:layout_alignStart="@+id/Operator"
+        android:text="@string/value2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <TextView
+        android:id="@+id/Operator"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Input2"
+        android:layout_marginStart="20dp"
+        android:text="@string/operator"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <EditText
+        android:id="@+id/Input1"
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/Input2"
+        android:ems="10"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/Input2"
+        android:hint="@string/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Operators"
+        android:layout_below="@+id/Value1"
+        android:ems="10"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <Spinner
+        android:id="@+id/Operators"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Result"
+        android:layout_alignTop="@+id/Operator"
+        android:ems="12"
+        android:entries="@array/operators"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="111dp"/>
+
+    <Button
+        android:id="@+id/Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Value1"
+        android:layout_below="@+id/Operator"
+        android:text="@string/calculate"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="208dp"
+        android:layout_height="137dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/Operator"
+        android:layout_marginEnd="37dp"
+        android:text=""
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="157dp" />
+
+
+</RelativeLayout>
